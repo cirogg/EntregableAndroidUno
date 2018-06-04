@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+
+    <ImageView
+        android:id="@+id/imgImagenReceta"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:src="@drawable/receta"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/textViewTituloReceta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titulo de la receta"
+        android:textSize="20dp"
+        android:background="#e3fd6d"/>
+
+</LinearLayout>
