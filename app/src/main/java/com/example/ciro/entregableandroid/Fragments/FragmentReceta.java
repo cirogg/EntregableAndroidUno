@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.EditText;
 
 import com.example.ciro.entregableandroid.Adapters.AdapterRwRecetas;
 import com.example.ciro.entregableandroid.Clases.DataProvider;
+import com.example.ciro.entregableandroid.Clases.SwipeControlador;
 import com.example.ciro.entregableandroid.R;
 import com.example.ciro.entregableandroid.Clases.Receta;
 
@@ -36,6 +38,10 @@ public class FragmentReceta extends Fragment implements AdapterRwRecetas.Comunic
     List<Receta> listaDeRecetas = new ArrayList<>();
 
     ComunicadorFragment2Activity comunicadorFragment2Activity;
+
+    SwipeControlador swipeControlador;
+
+    ItemTouchHelper itemTouchHelper;
 
     EditText editTextSearch;
 
@@ -69,6 +75,16 @@ public class FragmentReceta extends Fragment implements AdapterRwRecetas.Comunic
         //Seteo Adapter al RW
         adapterRwRecetas = new AdapterRwRecetas(this,listaDeRecetas);
         recyclerViewRecetas.setAdapter(adapterRwRecetas);
+
+        //SWIPE
+        swipeControlador = new SwipeControlador(adapterRwRecetas);
+        itemTouchHelper = new ItemTouchHelper(swipeControlador);
+        itemTouchHelper.attachToRecyclerView(recyclerViewRecetas);
+
+
+
+
+
 
         ////////////////ESCUCHADOR FILTRO//////////////
         editTextSearch = view.findViewById(R.id.editTextSearch);
@@ -115,4 +131,29 @@ public class FragmentReceta extends Fragment implements AdapterRwRecetas.Comunic
         DataProvider.listaDeRecetas = listaDeRecetasFiltradas;
 
     }
+
+    // Mudado a una clase externa.
+   /* private ItemTouchHelper.Callback createItemTouchHelper(){
+        ItemTouchHelper.Callback simpleCallback = new ItemTouchHelper.Callback() {
+            @Override
+            public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+                int drag = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+                int swipe = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+                return makeMovementFlags(drag,swipe);
+            }
+
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+
+                adapterRwRecetas.moverItemDeLaLista(viewHolder.getAdapterPosition(), target.getAdapterPosition());
+                return true;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+                adapterRwRecetas.removerItemDeLaLista(viewHolder.getAdapterPosition());
+            }
+        };
+        return simpleCallback;
+    }*/
 }

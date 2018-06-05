@@ -32,6 +32,8 @@ public class AdapterRwRecetas extends RecyclerView.Adapter {
     }
 
 
+
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -55,6 +57,19 @@ public class AdapterRwRecetas extends RecyclerView.Adapter {
     @Override
     public int getItemCount() {
         return listaDeRecetas.size();
+    }
+
+    public void removerItemDeLaLista(int position) {
+        listaDeRecetas.remove(position);
+        notifyItemRemoved(position);
+        notifyItemRangeChanged(position, listaDeRecetas.size());
+    }
+
+    public void moverItemDeLaLista(int oldPos, int newPos) {
+        Receta receta = listaDeRecetas.get(oldPos);
+        listaDeRecetas.remove(oldPos);
+        listaDeRecetas.add(newPos, receta);
+        notifyItemMoved(oldPos, newPos);
     }
 
     //VIEWHOLDER
