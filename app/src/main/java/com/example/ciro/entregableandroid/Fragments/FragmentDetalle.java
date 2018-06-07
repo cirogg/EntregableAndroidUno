@@ -20,6 +20,8 @@ import com.example.ciro.entregableandroid.Clases.Receta;
 public class FragmentDetalle extends Fragment {
 
     TextView textViewTitulo;
+    TextView textViewIngredientes;
+    TextView textViewPreparacion;
     ImageView imageViewReceta;
 
 
@@ -43,6 +45,8 @@ public class FragmentDetalle extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fragment_detalle, container, false);
 
         textViewTitulo = view.findViewById(R.id.textViewTituloRecetaDetalle);
+        textViewIngredientes = view.findViewById(R.id.textViewIngredientes);
+        textViewPreparacion = view.findViewById(R.id.textViewPreparacion);
         imageViewReceta = view.findViewById(R.id.imgImagenRecetaDetalle);
 
         Bundle unBundle = getArguments();
@@ -53,6 +57,8 @@ public class FragmentDetalle extends Fragment {
         //////////////
 
         textViewTitulo.setText(recetaAMostrar.getTitulo());
+        textViewIngredientes.setText(recetaAMostrar.getIngredientes());
+        textViewPreparacion.setText(recetaAMostrar.getPreparacion());
         imageViewReceta.setImageResource(recetaAMostrar.getImagen());
 
 

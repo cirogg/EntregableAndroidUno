@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.ciro.entregableandroid.Fragments.FragmentAboutUs;
+import com.example.ciro.entregableandroid.Fragments.FragmentHome;
 import com.example.ciro.entregableandroid.Fragments.FragmentReceta;
 import com.example.ciro.entregableandroid.R;
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements FragmentReceta.Co
         setContentView(R.layout.activity_main);
 
         fragmentManager = getSupportFragmentManager();
+
+        cargarFragment(new FragmentHome());
 
         navigationView = findViewById(R.id.navigationViewMain);
         navigationView.setNavigationItemSelectedListener(new ListenerNavigation());

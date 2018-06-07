@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#aed581"
+    tools:context="com.example.ciro.entregableandroid.Fragments.FragmentHome">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gorrologo"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Estas listo para"
+        android:gravity="center"
+        android:textSize="34dp"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textColor="#bd4133"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Morirte de hambre?"
+    android:gravity="center"
+    android:textSize="50dp"
+    android:fontFamily="cursive"
+    android:textStyle="bold"
+    android:textColor="#bd4133"/>
+
+<ImageView
+    android:id="@+id/imgGif"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    />
+
+</LinearLayout>

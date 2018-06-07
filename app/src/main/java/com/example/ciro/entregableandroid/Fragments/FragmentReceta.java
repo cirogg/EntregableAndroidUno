@@ -16,7 +16,7 @@ import android.widget.EditText;
 
 import com.example.ciro.entregableandroid.Adapters.AdapterRwRecetas;
 import com.example.ciro.entregableandroid.Clases.DataProvider;
-import com.example.ciro.entregableandroid.Clases.SwipeControlador;
+import com.example.ciro.entregableandroid.Adapters.SwipeControlador;
 import com.example.ciro.entregableandroid.R;
 import com.example.ciro.entregableandroid.Clases.Receta;
 

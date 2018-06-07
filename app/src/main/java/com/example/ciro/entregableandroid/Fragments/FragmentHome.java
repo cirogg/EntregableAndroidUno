@@ -11,15 +11,14 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.example.ciro.entregableandroid.R;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentAboutUs extends Fragment {
+public class FragmentHome extends Fragment {
 
-    ImageView gifAboutUs;
+    ImageView testGifGlide;
 
-    public FragmentAboutUs() {
+    public FragmentHome() {
         // Required empty public constructor
     }
 
@@ -28,10 +27,11 @@ public class FragmentAboutUs extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_fragment_about_us, container, false);
-        gifAboutUs = view.findViewById(R.id.gifAboutUs);
-        String url = "https://media.giphy.com/media/1qcQStVKhXfBqFvek7/giphy.gif";
-        Glide.with(this).load(url).into(gifAboutUs);
+        View view = inflater.inflate(R.layout.fragment_fragment_home, container, false);
+
+        testGifGlide = view.findViewById(R.id.imgGif);
+        String url = "https://media.giphy.com/media/l4FGFT5D4NKA9rGxy/giphy.gif";
+        Glide.with(this).load(url).into(testGifGlide);
 
         return view;
     }

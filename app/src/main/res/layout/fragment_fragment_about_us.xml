@@ -1,14 +1,40 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#aed581"
+    android:orientation="vertical"
     tools:context="com.example.ciro.entregableandroid.Fragments.FragmentAboutUs">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/gifAboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="370dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="FRAGMENT ABOUT US"
-        android:textSize="35dp"/>
+        android:layout_height="wrap_content"
+        android:text="Ciro Gonzalez"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:fontFamily="monospace"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Digital House"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:fontFamily="monospace"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Curso: Android"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:fontFamily="monospace"/>
 
-</FrameLayout>
+</LinearLayout>

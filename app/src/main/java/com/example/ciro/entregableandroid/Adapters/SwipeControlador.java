@@ -1,4 +1,4 @@
-package com.example.ciro.entregableandroid.Clases;
+package com.example.ciro.entregableandroid.Adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;

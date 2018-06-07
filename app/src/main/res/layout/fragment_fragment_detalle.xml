@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#aed581"
     tools:context="com.example.ciro.entregableandroid.Fragments.FragmentDetalle">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,12 +12,48 @@
         android:id="@+id/imgImagenRecetaDetalle"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:scaleType="fitXY"/>
+        android:scaleType="centerCrop"/>
     <TextView
         android:id="@+id/textViewTituloRecetaDetalle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:text="@string/hello_blank_fragment" />
+        android:text="TITULO"
+        android:gravity="center"
+        android:fontFamily="monospace"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="INGREDIENTES"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/textViewIngredientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ingredientes"
+        android:textSize="20dp"
+        android:fontFamily="monospace"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Preparacion"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/textViewPreparacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Preparacion"
+        android:textSize="20dp"
+        android:fontFamily="monospace"
+        />
 
 </LinearLayout>
