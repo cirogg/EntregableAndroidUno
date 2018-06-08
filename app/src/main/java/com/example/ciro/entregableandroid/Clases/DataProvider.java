@@ -14,7 +14,7 @@ import java.util.List;
 public class DataProvider {
     public static List<Receta> listaDeRecetas = new ArrayList<>();
 
-    
+
 
 
     public static List<Receta> getListaDeRecetas() {
@@ -45,21 +45,8 @@ public class DataProvider {
         return listaDeRecetas;
     }
 
-    public void setListaDeRecetas(List<Receta> listaDeRecetas) {
-        this.listaDeRecetas = listaDeRecetas;
-    }
 
-   /* public Receta getRecetaSeleccionada (Integer pos){
-        getListaDeRecetas();
-        Receta recetaADevolver = null;
-        for (Receta recetaDeLaLista : listaDeRecetas) {
-            if (pos.equals(listaDeRecetas.indexOf(recetaDeLaLista))){
-                recetaADevolver = recetaDeLaLista;
-                break;
-            }
-        }
-        return recetaADevolver;
-    }*/
+
 
 
 }

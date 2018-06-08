@@ -59,6 +59,7 @@ public class AdapterRwRecetas extends RecyclerView.Adapter {
         return listaDeRecetas.size();
     }
 
+    //SWIPE
     public void removerItemDeLaLista(int position) {
         listaDeRecetas.remove(position);
         notifyItemRemoved(position);
@@ -71,6 +72,8 @@ public class AdapterRwRecetas extends RecyclerView.Adapter {
         listaDeRecetas.add(newPos, receta);
         notifyItemMoved(oldPos, newPos);
     }
+//////////////////////////////////
+
 
     //VIEWHOLDER
     private class ViewHolderRecetas extends RecyclerView.ViewHolder {
@@ -104,7 +107,7 @@ public class AdapterRwRecetas extends RecyclerView.Adapter {
         }
     }
 
-
+    //FILTRO
     public void filtrarLista(ArrayList<Receta> listaDeRecetasFiltradas) {
         listaDeRecetas = listaDeRecetasFiltradas;
         notifyDataSetChanged();

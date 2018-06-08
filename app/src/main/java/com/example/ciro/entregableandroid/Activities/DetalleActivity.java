@@ -25,7 +25,6 @@ public class DetalleActivity extends AppCompatActivity {
 
     List<Receta> listaDeRecetas = new ArrayList<>();
 
-    DataProvider dataProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

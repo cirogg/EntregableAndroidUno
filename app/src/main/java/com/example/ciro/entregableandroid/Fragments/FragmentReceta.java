@@ -30,19 +30,13 @@ import java.util.List;
 public class FragmentReceta extends Fragment implements AdapterRwRecetas.ComunicadorAdapterOut {
 
     RecyclerView recyclerViewRecetas;
-
     public DataProvider dataProvider;
-
     AdapterRwRecetas adapterRwRecetas;
-
     List<Receta> listaDeRecetas = new ArrayList<>();
-
     ComunicadorFragment2Activity comunicadorFragment2Activity;
 
     SwipeControlador swipeControlador;
-
     ItemTouchHelper itemTouchHelper;
-
     EditText editTextSearch;
 
     public FragmentReceta() {

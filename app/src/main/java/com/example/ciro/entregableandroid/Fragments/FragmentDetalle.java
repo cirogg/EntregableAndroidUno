@@ -52,7 +52,6 @@ public class FragmentDetalle extends Fragment {
         Bundle unBundle = getArguments();
 
         //////////////
-        //DataProvider dataProvider = new DataProvider();0
         Receta recetaAMostrar = DataProvider.listaDeRecetas.get(unBundle.getInt("pos"));
         //////////////
 

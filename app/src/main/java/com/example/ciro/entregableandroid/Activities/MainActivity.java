@@ -6,6 +6,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -60,15 +61,20 @@ public class MainActivity extends AppCompatActivity implements FragmentReceta.Co
     //NavigationMenu
     public void selectedItem(MenuItem item) {
 
+        DrawerLayout drawerLayout = findViewById(R.id.drawLayoutMain);
+
         switch (item.getItemId()) {
             case R.id.itemRecetas:
 
                 cargarFragment(new FragmentReceta());
+                drawerLayout.closeDrawers();
+
 
                 break;
             case R.id.itemAboutUs:
 
                 cargarFragment(new FragmentAboutUs());
+                drawerLayout.closeDrawers();
 
                 break;
         }
